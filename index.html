@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN BITES</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="LOGO.png" alt="">
+          </div>
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    <nav class="navbar">
+        <a href="index.html" style="--i:0;">Home</a>
+        <a href="about.html" style="--i:1;">About</a>
+        <a href="menu.html" style="--i:2;">Menu</a>
+        <a href="order.html" style="--i:3;">Order Now</a>
+        <a href="contact.html" style="--i:4;">Contact Us</a>
+    </nav>
+</header>
+<!-- Image Slider  -->
+<div class="slideshow-container">
+    <div class="mySlides">
+      <img src="imgslider1.jpg" style="width:100%; height: auto;">
+    </div>
+    <div class="mySlides">
+      <img src="imgslider2.jpg" style="width:100%; height: auto;">
+    </div>
+    <div class="mySlides">
+      <img src="imgslider3.png" style="width:100%; height: 70%;">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <section id="about">
+    <div class="about-wrapper container">
+        <div class="about-text">
+          <p class="small">About Us</p>
+          <h2>We've been making healthy & delicious food.</h2>
+          <p>Welcome to URBAN BITES, where culinary passion meets unparalleled hospitality.
+           Nestled in the heart of Kolkata, our restaurant is a vibrant celebration of flavors,
+           crafted with care and served with warmth. At The Epic Eclair, we take pride in sourcing the finest, 
+           freshest ingredients to create a menu that tantalizes your taste buds. Our chefs, driven by creativity 
+           and a dedication to culinary excellence, artfully prepare each dish to deliver an unforgettable dining experience. 
+           Whether you're here for a casual lunch, a romantic dinner, or a special celebration, our inviting ambiance and attentive
+           staff ensure that every moment at The Epic Eclair is a delightful culinary journey. Join us and savor the essence of
+           extraordinary dining in a setting that reflects our commitment to quality and innovation.</p>
+        </div>
+        <div class="about-img">
+          <img src="about.jpg" >
+        </div>
+    </div>
+  </section>
+   <!-- Footer  -->
+   <footer class="footer">
+    <div class="slideshow-container">
+        <div class="row">
+             <div class="footer-col">
+            <h4>The Epic Eclair</h4>
+            <ul>
+                <li><a href="#">25/9, 1st floor, Hospital Road, Kalikapur, Kolkata, West Bengal 700078, India</a></li>
+            </ul>
+            </div>
+        <div class="footer-col">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Restraunt</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>our Timings</h4>
+            <ul>
+                <li><a href="#">Monday 12:00pm - 10:30pm</a></li>
+                <li><a href="#">Tuesday 12:00pm - 10:30pm</a></li>
+                <li><a href="#">Wednesday 12:00pm - 10:30pm</a></li>
+                <li><a href="#">Thursday 12:00pm - 10:30pm</a></li>
+                <li><a href="#">Friday 12:00pm - 10:30pm</a></li>
+                <li><a href="#">Saturday 12:00pm - 11:00pm</a></li>
+                <li><a href="#">Sunday 12:00pm - 11:00pm</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+<!-- Image Slider Program  -->
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>
